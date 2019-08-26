@@ -1,0 +1,29 @@
+@import 'tokens/tokens';
+@import 'page/page';
+
+*:not(.fn-axis) {
+	@include outline;
+}
+
+ul,
+ol {
+	list-style: none;
+	display: inline-flex;
+    flex-direction: column;
+	margin: 0;
+    padding: $gutter-1-2;
+}
+
+a:visited,
+a:focus {
+	color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: $font-light;
+}
