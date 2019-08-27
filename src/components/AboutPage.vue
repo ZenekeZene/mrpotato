@@ -1,27 +1,24 @@
 <template>
 	<article class="face-wrapper">
-		<swiper ref="mySwiper" :options="swiperOption">
+		<section class="block"></section>
+		<swiper :options="swiperOption">
 			<swiper-slide>I'm Slide 1</swiper-slide>
 			<swiper-slide>I'm Slide 2</swiper-slide>
 		</swiper>
-		<swiper ref="mySwiper" :options="swiperOption">
+		<swiper :options="swiperOption">
 			<swiper-slide>I'm Slide 1</swiper-slide>
 			<swiper-slide>I'm Slide 2</swiper-slide>
 		</swiper>
-		<swiper ref="mySwiper" :options="swiperOption">
+		<swiper :options="swiperOption">
 			<swiper-slide>I'm Slide 1</swiper-slide>
 			<swiper-slide>I'm Slide 2</swiper-slide>
 		</swiper>
-		<swiper ref="mySwiper" :options="swiperOption">
-			<swiper-slide>I'm Slide 1</swiper-slide>
-			<swiper-slide>I'm Slide 2</swiper-slide>
-		</swiper>
-		<swiper ref="mySwiper" :options="swiperOption">
+		<swiper :options="swiperOption">
 			<swiper-slide>I'm Slide 1</swiper-slide>
 			<swiper-slide>I'm Slide 2</swiper-slide>
 		</swiper>
 
-		<swiper ref="mySwiper" :options="swiperOptionVertical" class="swiper-vertical">
+		<swiper :options="swiperOptionVertical" class="swiper-vertical">
 			<swiper-slide>I'm Slide 1</swiper-slide>
 			<swiper-slide>I'm Slide 2</swiper-slide>
 		</swiper>
@@ -62,7 +59,6 @@
 		justify-content: center;
 		align-items: center;
 		height: calc(100vh / 6);
-		border: 1px dashed green;
 	}
 
 	.swiper-container-cube {
@@ -77,6 +73,10 @@
 		width: 28vw;
 		height: 23vh;
 		transform: translate3D(-50%, 50%, 0);
+	}
+
+	.block {
+		height: calc(100vh / 6);
 	}
 
 </style>
