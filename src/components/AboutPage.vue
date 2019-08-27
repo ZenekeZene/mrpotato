@@ -52,31 +52,3 @@
 		},
 	};
 </script>
-<style lang="scss">
-	.swiper-slide,
-	.swiper-container-cube .swiper-slide {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: calc(100vh / 6);
-	}
-
-	.swiper-container-cube {
-		perspective: none;
-	}
-
-	.swiper-vertical {
-		position: absolute;
-		top: 20vh;
-		left: 50%;
-		z-index: 1;
-		width: 28vw;
-		height: 23vh;
-		transform: translate3D(-50%, 50%, 0);
-	}
-
-	.block {
-		height: calc(100vh / 6);
-	}
-
-</style>
