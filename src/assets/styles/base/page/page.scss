@@ -41,17 +41,21 @@ body {
 }
 
 .app {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	@include flex(flex, center, center);
 	flex-direction: column;
 	height: 100%;
-	padding: $gutter;
-    text-align: center;
-    color: $color-primary;
+	text-align: center;
+	color: $color-primary;
 
 	&__logo {
 		max-width: 300px;
 		margin-bottom: $gutter;
 	}
+}
+
+.face-wrapper {
+	width: 100%;
+	height: 100%;
 }

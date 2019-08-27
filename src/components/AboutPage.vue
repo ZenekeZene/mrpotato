@@ -1,5 +1,5 @@
 <template>
-	<article style="width: 100%; height: 100%; border: 2px solid red;">
+	<article class="face-wrapper">
 		<swiper ref="mySwiper" :options="swiperOption">
 			<swiper-slide>I'm Slide 1</swiper-slide>
 			<swiper-slide>I'm Slide 2</swiper-slide>
@@ -37,6 +37,14 @@
 				swiperOption: {
 					centeredSlides: true,
 					slidesPerView: 1,
+					effect: 'cube',
+					grabCursor: true,
+					cubeEffect: {
+						shadow: false,
+						slideShadows: true,
+						shadowOffset: 0,
+						shadowScale: 1
+					},
 				},
 				swiperOptionVertical: {
 					direction: 'vertical',
@@ -48,9 +56,17 @@
 	};
 </script>
 <style lang="scss">
-	.swiper-slide {
+	.swiper-slide,
+	.swiper-container-cube .swiper-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		height: calc(100vh / 6);
-		border: 2px solid green;
+		border: 1px dashed green;
+	}
+
+	.swiper-container-cube {
+		perspective: none;
 	}
 
 	.swiper-vertical {
@@ -61,11 +77,6 @@
 		width: 28vw;
 		height: 23vh;
 		transform: translate3D(-50%, 50%, 0);
-
-		.swiper-slide {
-			height: 100vh;
-			border: 2px solid black;
-		}
 	}
 
 </style>
