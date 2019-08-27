@@ -1,9 +1,8 @@
 <template>
-  <main class="app">
-    <img src="/static/logo.png" alt="Logo of boilerplate" class="app__logo">
-    <router-view/>
-	<github-item></github-item>
-  </main>
+	<main class="app">
+		<router-view/>
+		<github-item></github-item>
+	</main>
 </template>
 
 <script>
