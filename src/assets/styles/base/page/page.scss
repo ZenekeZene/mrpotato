@@ -57,7 +57,6 @@ body {
 
 .face-wrapper {
 	position: relative;
-	border: 2px solid red;
 	@include share(width, height, 100%);
 
 	&:before {
@@ -68,7 +67,7 @@ body {
 		display: inline-block;
 		width: 100%;
 		height: 100%;
-		background: url('../../../static/background.jpg') no-repeat;
+		//background: url('../../../static/background.jpg') no-repeat;
 		background-size: cover;
 		background-position-x: -21px;
 		opacity: 0.1;
@@ -80,7 +79,15 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: calc(100vh / 6) !important;
+	height: 21vw !important;
+	padding: 1rem;
+
+	.box {
+		@include flex(flex, center, center);
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.39);
+	}
 }
 
 .swiper-container-cube {
@@ -104,7 +111,6 @@ body {
 .swiper-container.pieces-swiper {
 	@include absolute(bottom left);
 	width: 100%;
-	outline: 1px solid blue;
 }
 
 .face {
@@ -116,120 +122,127 @@ body {
 .item {
 	position: absolute;
 	display: inline-block;
-	border: 1px solid red;
+	background-color: rgb(226, 226, 226);
 
 	&:hover {
 		cursor: pointer;
 		box-shadow: 0rem 0.5rem 0.5rem rgb(177, 177, 177);
-	}
 
-	&.hat {
-		top: 2rem;
-		right: 2rem;
-		width: 7rem;
-		height: 3rem;
-		transform: rotate(20deg);
-		border-radius: 5rem 5rem 0 0;
-	}
-
-	&.hair {
-		top: 3rem;
-		left: 7.5%;
-		width: 85%;
-		height: 6rem;
-		border-radius: 8rem 8rem 0 0;
-	}
-
-	&.eye {
-		top: 37%;
-		padding: 2rem;
-		border-radius: 50%;
-
-		&.--left {
-			left: 13%;
-		}
-
-		&.--right {
-			right: 13%;
+		&.--back {
+			z-index: 1;
+			opacity: 0.5;
 		}
 	}
+}
 
-	&.eyebrown {
-		top: 30%;
-		width: 5rem;
-		height: 1.5rem;
-		border-radius: 50% 50% 0 0;
+.hat {
+	top: 2rem;
+	right: 2rem;
+	width: 7rem;
+	height: 3rem;
+	transform: rotate(20deg);
+	border-radius: 5rem 5rem 0 0;
+}
 
-		&.--left {
-			left: 13%;
-		}
+.hair {
+	top: 3rem;
+	left: 7.5%;
+	width: 85%;
+	height: 6rem;
+	border-radius: 8rem 8rem 0 0;
+}
 
-		&.--right {
-			right: 13%;
-		}
+.eye {
+	top: 37%;
+	padding: 2rem;
+	background-color: white;
+	border-radius: 50%;
+
+	&.--left {
+		left: 13%;
 	}
 
-	&.ear {
-		top: 47%;
-		width: 2rem;
-		height: 5rem;
+	&.--right {
+		right: 13%;
+	}
+}
 
-		&.--left {
-			left: 0;
-			border-radius: 2rem 0 0 5rem;
-		}
+.eyebrown {
+	top: 30%;
+	width: 5rem;
+	height: 1.5rem;
+	border-radius: 50% 50% 0 0;
 
-		&.--right {
-			right: 0;
-			border-radius: 0 2rem 5rem 0;
-		}
+	&.--left {
+		left: 13%;
 	}
 
-	&.nose {
-		top: 40%;
-		left: 50%;
-		width: 4rem;
-		height: 8rem;
-		transform: translateX(-50%);
-		border-radius: 0.5rem 0.5rem 2rem 2rem;
+	&.--right {
+		right: 13%;
+	}
+}
+
+.ear {
+	top: 47%;
+	width: 2.25rem;
+	height: 5rem;
+
+	&.--left {
+		left: 0.25rem;
+		border-radius: 2rem 0 0 5rem;
 	}
 
-	&.mouth {
-		top: 65%;
-		left: 50%;
-		padding: 2rem 4rem;
-		border-radius: 6rem 6rem 1rem 1rem;
-		transform: translateX(-50%);
+	&.--right {
+		right: 0.25rem;
+		border-radius: 0 2rem 5rem 0;
 	}
+}
 
-	&.front,
-	&.middle,
-	&.back {
-		left: 7.5%;
-		width: 85%;
-	}
+.nose {
+	top: 40%;
+	left: 50%;
+	width: 4rem;
+	height: 8rem;
+	transform: translateX(-50%);
+	border-radius: 0.5rem 0.5rem 2rem 2rem;
+}
 
-	&.front {
-		top: 4rem;
-		height: 26%;
-		border-radius: 8rem 8rem 0 0;
-	}
+.mouth {
+	top: 65%;
+	left: 50%;
+	padding: 2rem 4rem;
+	border-radius: 6rem 6rem 1rem 1rem;
+	transform: translateX(-50%);
+}
 
-	&.middle {
-		top: 36%;	
-		height: 26%;
-	}
+.front,
+.middle,
+.back {
+	left: 7.5%;
+	width: 85%;
+}
 
-	&.back {
-		top: 62.5%;
-		height: 7rem;
-		border-radius: 0 0 8rem 8rem;
-	}
+.front {
+	top: 4rem;
+	height: 26%;
+	border-radius: 8rem 8rem 0 0;
+}
+
+.middle {
+	top: 35%;
+	height: 28%;
+	background-color: rgb(226, 226, 226);
+	border: none !important;
+}
+
+.back {
+	top: 62.5%;
+	height: 7rem;
+	border-radius: 0 0 8rem 8rem;
 }
 
 .atrezzo {
 	position: absolute;
-	border: 1px solid grey;
 
 	&.neck {
 		bottom: 4.5rem;
@@ -237,6 +250,7 @@ body {
 		width: 6rem;
 		height: 4rem;
 		transform: translateX(-50%);
+		background-color: white;
 		border-radius: 0 0 8rem 8rem;
 	}
 
@@ -249,5 +263,5 @@ body {
 }
 
 .bg-template {
-	background-color: #e3e3e3;
+	background-color: rgb(202, 202, 202);
 }

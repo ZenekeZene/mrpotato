@@ -1,9 +1,9 @@
 <template>
 	<article class="face-wrapper">
 		<ul class="face">
-			<li class="item front"></li>
-			<li class="item middle"></li>
-			<li class="item back"></li>
+			<li class="item front --back"></li>
+			<li class="atrezzo middle"></li>
+			<li class="item back --back"></li>
 			<li class="item hair bg-template"></li>
 			<li class="item hat bg-template"></li>
 			<li class="item eyebrown --left bg-template"></li>
@@ -15,19 +15,36 @@
 			<li class="item nose bg-template"></li>
 			<li class="item mouth bg-template"></li>
 			<li class="atrezzo body bg-template"></li>
-			<li class="atrezzo neck bg-template"></li>
+			<li class="atrezzo neck"></li>
 		</ul>
 		<swiper :options="swiperOptionPieces" class="pieces-swiper">
-			<swiper-slide>1</swiper-slide>
-			<swiper-slide>2</swiper-slide>
-			<swiper-slide>3</swiper-slide>
-			<swiper-slide>4</swiper-slide>
-			<swiper-slide>5</swiper-slide>
-			<swiper-slide>6</swiper-slide>
-			<swiper-slide>7</swiper-slide>
-			<swiper-slide>8</swiper-slide>
-			<swiper-slide>9</swiper-slide>
-			<swiper-slide>10</swiper-slide>
+			<swiper-slide>
+				<div class="box">1</div>
+			</swiper-slide>
+			<swiper-slide>
+				<div class="box">2</div>
+			</swiper-slide>
+			<swiper-slide>
+				<div class="box">3</div>
+			</swiper-slide>
+			<swiper-slide>
+				<div class="box">4</div>
+			</swiper-slide>
+			<swiper-slide>
+				<div class="box">5</div>
+			</swiper-slide>
+			<swiper-slide>
+				<div class="box">6</div>
+			</swiper-slide>
+			<swiper-slide>
+				<div class="box">7</div>
+			</swiper-slide>
+			<swiper-slide>
+				<div class="box">8</div>
+			</swiper-slide>
+			<swiper-slide>
+				<div class="box">9</div>
+			</swiper-slide>
 		</swiper>
 	</article>
 </template>
