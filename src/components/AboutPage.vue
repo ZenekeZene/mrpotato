@@ -1,12 +1,21 @@
 <template>
 	<article class="face-wrapper">
-		<section class="block"></section>
-		<ul>
-			<li class="item front">Front</li>
-			<li class="item eye --left">Ojo</li>
-			<li class="item eye --right">Ojo</li>
-			<li class="item nose">Nariz</li>
-			<li class="item mouth">Boca</li>
+		<ul class="face">
+			<li class="item front"></li>
+			<li class="item middle"></li>
+			<li class="item back"></li>
+			<li class="item hair bg-template"></li>
+			<li class="item hat bg-template"></li>
+			<li class="item eyebrown --left bg-template"></li>
+			<li class="item eyebrown --right bg-template"></li>
+			<li class="item eye --left"></li>
+			<li class="item eye --right"></li>
+			<li class="item ear --left"></li>
+			<li class="item ear --right"></li>
+			<li class="item nose bg-template"></li>
+			<li class="item mouth bg-template"></li>
+			<li class="atrezzo body bg-template"></li>
+			<li class="atrezzo neck bg-template"></li>
 		</ul>
 		<swiper :options="swiperOptionPieces" class="pieces-swiper">
 			<swiper-slide>1</swiper-slide>

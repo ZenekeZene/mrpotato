@@ -71,7 +71,7 @@ body {
 		background: url('../../../static/background.jpg') no-repeat;
 		background-size: cover;
 		background-position-x: -21px;
-		opacity: 0.5;
+		opacity: 0.1;
 	}
 }
 
@@ -107,10 +107,38 @@ body {
 	outline: 1px solid blue;
 }
 
+.face {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
 .item {
 	position: absolute;
 	display: inline-block;
-	border: 2px solid red;
+	border: 1px solid red;
+
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0rem 0.5rem 0.5rem rgb(177, 177, 177);
+	}
+
+	&.hat {
+		top: 2rem;
+		right: 2rem;
+		width: 7rem;
+		height: 3rem;
+		transform: rotate(20deg);
+		border-radius: 5rem 5rem 0 0;
+	}
+
+	&.hair {
+		top: 3rem;
+		left: 7.5%;
+		width: 85%;
+		height: 6rem;
+		border-radius: 8rem 8rem 0 0;
+	}
 
 	&.eye {
 		top: 37%;
@@ -126,10 +154,42 @@ body {
 		}
 	}
 
+	&.eyebrown {
+		top: 30%;
+		width: 5rem;
+		height: 1.5rem;
+		border-radius: 50% 50% 0 0;
+
+		&.--left {
+			left: 13%;
+		}
+
+		&.--right {
+			right: 13%;
+		}
+	}
+
+	&.ear {
+		top: 47%;
+		width: 2rem;
+		height: 5rem;
+
+		&.--left {
+			left: 0;
+			border-radius: 2rem 0 0 5rem;
+		}
+
+		&.--right {
+			right: 0;
+			border-radius: 0 2rem 5rem 0;
+		}
+	}
+
 	&.nose {
-		top: 43%;
+		top: 40%;
 		left: 50%;
-		padding: 1rem 1rem 5rem 1rem;
+		width: 4rem;
+		height: 8rem;
 		transform: translateX(-50%);
 		border-radius: 0.5rem 0.5rem 2rem 2rem;
 	}
@@ -141,4 +201,53 @@ body {
 		border-radius: 6rem 6rem 1rem 1rem;
 		transform: translateX(-50%);
 	}
+
+	&.front,
+	&.middle,
+	&.back {
+		left: 7.5%;
+		width: 85%;
+	}
+
+	&.front {
+		top: 4rem;
+		height: 26%;
+		border-radius: 8rem 8rem 0 0;
+	}
+
+	&.middle {
+		top: 36%;	
+		height: 26%;
+	}
+
+	&.back {
+		top: 62.5%;
+		height: 7rem;
+		border-radius: 0 0 8rem 8rem;
+	}
+}
+
+.atrezzo {
+	position: absolute;
+	border: 1px solid grey;
+
+	&.neck {
+		bottom: 4.5rem;
+		left: 50%;
+		width: 6rem;
+		height: 4rem;
+		transform: translateX(-50%);
+		border-radius: 0 0 8rem 8rem;
+	}
+
+	&.body {
+		bottom: 0;
+		width: 96%;
+		height: 8rem;
+		border-radius: 9rem 9rem 0 0;
+	}
+}
+
+.bg-template {
+	background-color: #e3e3e3;
 }
