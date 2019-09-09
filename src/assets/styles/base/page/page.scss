@@ -56,6 +56,8 @@ body {
 }
 
 .face-wrapper {
+	position: relative;
+	border: 2px solid red;
 	@include share(width, height, 100%);
 
 	&:before {
@@ -97,4 +99,46 @@ body {
 
 .block {
 	height: calc(100vh / 6);
+}
+
+.swiper-container.pieces-swiper {
+	@include absolute(bottom left);
+	width: 100%;
+	outline: 1px solid blue;
+}
+
+.item {
+	position: absolute;
+	display: inline-block;
+	border: 2px solid red;
+
+	&.eye {
+		top: 37%;
+		padding: 2rem;
+		border-radius: 50%;
+
+		&.--left {
+			left: 13%;
+		}
+
+		&.--right {
+			right: 13%;
+		}
+	}
+
+	&.nose {
+		top: 43%;
+		left: 50%;
+		padding: 1rem 1rem 5rem 1rem;
+		transform: translateX(-50%);
+		border-radius: 0.5rem 0.5rem 2rem 2rem;
+	}
+
+	&.mouth {
+		top: 65%;
+		left: 50%;
+		padding: 2rem 4rem;
+		border-radius: 6rem 6rem 1rem 1rem;
+		transform: translateX(-50%);
+	}
 }

@@ -1,26 +1,24 @@
 <template>
 	<article class="face-wrapper">
 		<section class="block"></section>
-		<swiper :options="swiperOption">
-			<swiper-slide>I'm Slide 1</swiper-slide>
-			<swiper-slide>I'm Slide 2</swiper-slide>
-		</swiper>
-		<swiper :options="swiperOption">
-			<swiper-slide>I'm Slide 1</swiper-slide>
-			<swiper-slide>I'm Slide 2</swiper-slide>
-		</swiper>
-		<swiper :options="swiperOption">
-			<swiper-slide>I'm Slide 1</swiper-slide>
-			<swiper-slide>I'm Slide 2</swiper-slide>
-		</swiper>
-		<swiper :options="swiperOption">
-			<swiper-slide>I'm Slide 1</swiper-slide>
-			<swiper-slide>I'm Slide 2</swiper-slide>
-		</swiper>
-
-		<swiper :options="swiperOptionVertical" class="swiper-vertical">
-			<swiper-slide>I'm Slide 1</swiper-slide>
-			<swiper-slide>I'm Slide 2</swiper-slide>
+		<ul>
+			<li class="item front">Front</li>
+			<li class="item eye --left">Ojo</li>
+			<li class="item eye --right">Ojo</li>
+			<li class="item nose">Nariz</li>
+			<li class="item mouth">Boca</li>
+		</ul>
+		<swiper :options="swiperOptionPieces" class="pieces-swiper">
+			<swiper-slide>1</swiper-slide>
+			<swiper-slide>2</swiper-slide>
+			<swiper-slide>3</swiper-slide>
+			<swiper-slide>4</swiper-slide>
+			<swiper-slide>5</swiper-slide>
+			<swiper-slide>6</swiper-slide>
+			<swiper-slide>7</swiper-slide>
+			<swiper-slide>8</swiper-slide>
+			<swiper-slide>9</swiper-slide>
+			<swiper-slide>10</swiper-slide>
 		</swiper>
 	</article>
 </template>
@@ -47,6 +45,10 @@
 					direction: 'vertical',
 					centeredSlides: true,
 					slidesPerView: 1,
+				},
+				swiperOptionPieces: {
+					centeredSlides: false,
+					slidesPerView: 5,
 				},
 			};
 		},
